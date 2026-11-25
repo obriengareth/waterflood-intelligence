@@ -6,6 +6,7 @@ type Realtime = typeof Source.realtime & { timestamps: string[] };
 export type Dashboard = Omit<typeof Source, 'events' | 'trajectories' | 'selected' | 'wells' | 'realtime'> & {
   selected: WellRecord;
   wells: WellRecord[];
+  available_fields?: typeof Source.fields;
   realtime: Realtime;
   trajectories: Record<string, typeof Source.trajectories['RA-0417']>;
   completion: { casing_od_in: number; tubing_od_in: number; esp_setting_md_ft: number | null;

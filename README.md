@@ -45,7 +45,9 @@ npm run preview
 Open the displayed local origin followed by `/waterflood-intelligence/`.
 `node pages-acceptance.mjs` accepts `PAGES_URL` and `PAGES_EVIDENCE` environment variables;
 it verifies ten areas, assets, filters, prepared answers and all 120 five-second playback
-steps with a controlled browser clock. Its default local test origin is port 4176.
+steps against all 12,000 CSV well/time records with a controlled browser clock. Its
+default local test origin is port 4176. `node pages-live-check.mjs` separately verifies
+twelve updates with actual foreground wall-clock time on the public site.
 
 The Pages workflow builds `app/web/dist-pages`, creates every `.html` entry point and
 deploys the artifact using GitHub's official Pages actions. Set `VITE_BASE` when building

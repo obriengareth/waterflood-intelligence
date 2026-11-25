@@ -76,9 +76,11 @@ function matches(well: { field: string; reservoir: string; type: string }, param
     params.get(key) === well[key === 'well_type' ? 'type' : key as 'field' | 'reservoir']);
 }
 async function dashboard(params: URLSearchParams): Promise<Dashboard> {
-  const [source, allRows, pvts] = await Promise.all([json<Dashboard>('dashboard.json'), rows(),
-    json<Record<string, { bo: number; bw: number; rs: number; bg: number }>>('pvt.json')]);
+  const [source, allRows, pvts, prior] = await Promise.all([json<Dashboard>('dashboard.json'), rows(),
+    json<Record<string, { bo: number; bw: number; rs: number; bg: number }>>('pvt.json'),
+    json<{ well_id: string; oil_rate_bopd: number; water_rate_bwpd: number; gas_rate_mscfd: number; inj_rate_bwpd: number; hours_on: number }[]>('prior.json')]);
   const data = structuredClone(source);
+  data.available_fields = source.fields;
   const wells = source.wells.filter(well => matches(well, params));
   if (!wells.length) throw new Error('No wells match this context');
   const name = params.get('well') || (wells.some(w => w.name === 'RA-0417') ? 'RA-0417' : wells[0].name);
@@ -115,6 +117,20 @@ async function dashboard(params: URLSearchParams): Promise<Dashboard> {
       injectors: selected.filter(w => w.type === 'injector').length };
   });
   Object.assign(data.metrics, totals(wells), { online: wells.length });
+  const previous = prior.filter(row => wells.some(well => well.name === row.well_id));
+  const previousOil = previous.reduce((sum, row) => sum + row.oil_rate_bopd, 0);
+  const previousWater = previous.reduce((sum, row) => sum + row.water_rate_bwpd, 0);
+  let previousVoidage = 0, previousInjectionVolume = 0;
+  for (const row of previous) {
+    const fluid = pvts[source.wells.find(well => well.name === row.well_id)!.pvt_region];
+    previousVoidage += row.oil_rate_bopd * fluid.bo + row.water_rate_bwpd * fluid.bw +
+      Math.max(row.gas_rate_mscfd * 1000 - row.oil_rate_bopd * fluid.rs, 0) * fluid.bg;
+    previousInjectionVolume += row.inj_rate_bwpd * fluid.bw;
+  }
+  Object.assign(data.metrics, { prior_oil_bopd: previousOil, prior_inj_bwpd: previous.reduce((sum, row) => sum + row.inj_rate_bwpd, 0),
+    prior_water_cut_pct: previousOil + previousWater ? previousWater / (previousOil + previousWater) * 100 : 0,
+    prior_vrr: previousVoidage ? previousInjectionVolume / previousVoidage : 0,
+    prior_online: previous.filter(row => row.hours_on > 0).length });
   data.patterns = source.patterns.filter(p => data.fields.some(f => f.name === p.field)).map(p => {
     const selected = source.wells.filter(w => [...p.producers, p.injector].includes(w.name));
     return { ...p, ...totals(selected) };

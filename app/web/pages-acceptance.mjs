@@ -32,6 +32,19 @@ try {
       await page.locator('[data-map][data-ready=true]').waitFor({ timeout: 60000 });
       assert(requests.some(url => url.endsWith('regional-satellite.webp')));
     }
+    if (name === 'operations-overview') {
+      await page.getByRole('combobox', { name: 'Field', exact: true }).selectOption('Raudhatain');
+      await page.locator('[data-map][data-ready=true][data-well-count="18"]').waitFor({ timeout: 60000 });
+      await page.getByRole('button', { name: 'Export', exact: true }).click();
+      const snapshot = await page.evaluate(async () => JSON.parse(await window.__exportedSnapshot));
+      const prior = await page.request.get(`${base}data/prior.json`).then(r => r.json());
+      const expected = prior.filter(row => snapshot.wells.some(well => well.name === row.well_id))
+        .reduce((sum, row) => sum + row.oil_rate_bopd, 0);
+      assert.equal(snapshot.metrics.prior_oil_bopd, expected);
+      assert.equal(snapshot.fields.length, 1);
+      await page.getByRole('combobox', { name: 'Field', exact: true }).selectOption('all');
+      await page.locator('[data-map][data-ready=true][data-well-count="100"]').waitFor({ timeout: 60000 });
+    }
     if (name === 'well-360') {
       await page.locator('[data-scene][data-well-count="100"][data-surface-count="36"] canvas').waitFor();
       await page.getByRole('combobox', { name: 'Field', exact: true }).selectOption('Raudhatain');
@@ -40,6 +53,7 @@ try {
       await page.locator('[data-scene][data-well-count="18"]').waitFor();
       await page.reload();
       await page.locator('[data-scene][data-well-count="18"]').waitFor();
+      assert.equal(await page.getByRole('combobox', { name: 'Field', exact: true }).locator('option').count(), 7);
     }
     if (name === 'digital-twin') {
       await page.locator('[data-twin] canvas').waitFor({ timeout: 60000 });
