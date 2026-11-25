@@ -1,0 +1,49 @@
+{
+  "provider": "EOX IT Services GmbH",
+  "layer": "s2cloudless_3857",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "provider_license_url": "https://cloudless.eox.at/license-non-commercial",
+  "attribution": "EOxCloudless https://cloudless.eox.at by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2016 & 2017)",
+  "notes": "Historical surface imagery, not live acquisition. Two geographic crops and resampling only. No newer NC-restricted layers used.",
+  "extracts": [
+    {
+      "file": "kuwait-satellite.jpg",
+      "wgs84_bounds": [
+        45.6,
+        28.5,
+        49.8,
+        30.25
+      ],
+      "web_mercator_bounds": [
+        5076168.780173275,
+        3312159.8598184395,
+        5543710.641505023,
+        3535725.6597991595
+      ],
+      "width": 3200,
+      "height": 1800,
+      "source_url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=s2cloudless_3857&STYLES=&SRS=EPSG%3A3857&BBOX=5076168.780173275%2C3312159.8598184395%2C5543710.641505023%2C3535725.6597991595&WIDTH=3200&HEIGHT=1800&FORMAT=image%2Fjpeg",
+      "sha256": "eed54397948b2b05560a0863bd8295add466781bf2941b9b3939c15c10a4e60c"
+    },
+    {
+      "file": "raudhatain-satellite.jpg",
+      "wgs84_bounds": [
+        47.38,
+        29.74,
+        47.97,
+        29.94
+      ],
+      "web_mercator_bounds": [
+        5274317.473785303,
+        3470172.85693887,
+        5339995.973353333,
+        3495839.73206942
+      ],
+      "width": 2800,
+      "height": 1200,
+      "source_url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=s2cloudless_3857&STYLES=&SRS=EPSG%3A3857&BBOX=5274317.473785303%2C3470172.85693887%2C5339995.973353333%2C3495839.73206942&WIDTH=2800&HEIGHT=1200&FORMAT=image%2Fjpeg",
+      "sha256": "16695c1ed9650181239c888b39ad6baf3d63f1449f0392e41b1b77a9ca8d0b1f"
+    }
+  ]
+}

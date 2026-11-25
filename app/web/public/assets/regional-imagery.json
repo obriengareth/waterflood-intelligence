@@ -1,0 +1,31 @@
+{
+  "provider": "EOX IT Services GmbH",
+  "layer": "s2cloudless_3857",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "attribution": "EOxCloudless by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2016 & 2017)",
+  "file": "regional-satellite.jpg",
+  "wgs84_bounds": [
+    43.5,
+    25.5,
+    52.5,
+    33.5
+  ],
+  "web_mercator_bounds": [
+    4842397.8495074,
+    2937284.437423844,
+    5844273.266646863,
+    3961860.2174457465
+  ],
+  "width": 3600,
+  "height": 3600,
+  "source_url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=s2cloudless_3857&STYLES=&SRS=EPSG%3A3857&BBOX=4842397.8495074%2C2937284.437423844%2C5844273.266646863%2C3961860.2174457465&WIDTH=3600&HEIGHT=3600&FORMAT=image%2Fjpeg",
+  "sha256": "2d507515973e746cd52d5fca0fecb6e43dd80149e27648a6bbee5081fd03f9b5",
+  "browser_file": "regional-satellite.webp",
+  "browser_dimensions": [
+    2048,
+    2048
+  ],
+  "browser_sha256": "c5667ada47a15b1d6d35439a93d4acaddaba161b6628678bd9a8cc167184b4aa",
+  "notes": "Historical surface imagery. Wider regional extract; approved Kuwait and Raudhatain higher-detail crops remain unchanged. No newer NC layers used."
+}

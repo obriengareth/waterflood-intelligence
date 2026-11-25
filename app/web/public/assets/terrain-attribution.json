@@ -1,0 +1,223 @@
+{
+  "terrain_provider": "Mapzen Terrain Tiles / AWS Open Data",
+  "terrain_attribution": "SRTM and GMTED2010 data courtesy of the U.S. Geological Survey; Mapzen Terrain Tiles",
+  "terrain_license": "Underlying USGS SRTM/GMTED2010 public-domain data; attribution retained",
+  "terrain_license_url": "https://github.com/tilezen/joerd/blob/master/docs/attribution.md",
+  "satellite_attribution": "EOxCloudless by EOX IT Services GmbH, modified Copernicus Sentinel data 2016 & 2017; CC BY 4.0",
+  "photographic_references": [
+    {
+      "url": "https://www.kockw.com/sites/EN/Pages/Media%20Center/Photo-Library.aspx",
+      "image_url": "https://www.kockw.com/sites/AR/PhotoLibrary/%D8%A7%D9%84%D8%AD%D9%81%D8%B1/007.jpg",
+      "rights": "Copyright owner retained. Viewed for reference only; not redistributed.",
+      "observed_details": "Kuwait desert gravel pad, modular skid-mounted support plant, light control cabins, steel frames and yellow safety rails. Equipment geometry is illustrative, not an exact production-well reconstruction."
+    }
+  ],
+  "fields": [
+    {
+      "name": "Greater Burgan",
+      "prefix": "BG",
+      "bounds": [
+        47.9010153689607,
+        28.901607689879512,
+        48.062,
+        29.038392310120486
+      ],
+      "min_elevation_m": 49.04111110754451,
+      "max_elevation_m": 115.1622451229606,
+      "satellite_url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=s2cloudless_3857&STYLES=&SRS=EPSG%3A3857&BBOX=5332316.639353476%2C3363128.849001416%2C5350237.366506315%2C3380533.4238033285&WIDTH=1024&HEIGHT=1024&FORMAT=image%2Fjpeg",
+      "satellite_sha256": "6a08a3cfda0205ae44dbd7320aa427570d749df5548beebcd6d333dca0bbd396"
+    },
+    {
+      "name": "Raudhatain",
+      "prefix": "RA",
+      "bounds": [
+        47.598,
+        29.776358983848624,
+        47.762,
+        29.903641016151376
+      ],
+      "min_elevation_m": 24.823780899401754,
+      "max_elevation_m": 86.0,
+      "satellite_url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=s2cloudless_3857&STYLES=&SRS=EPSG%3A3857&BBOX=5298585.122778236%2C3474835.146183669%2C5316841.519268332%2C3491169.798149587&WIDTH=1024&HEIGHT=1024&FORMAT=image%2Fjpeg",
+      "satellite_sha256": "10780a765a6628e6fb011fb0742ec47f5f6108c5739f13b52fec04008ffe2d22"
+    },
+    {
+      "name": "Sabriyah",
+      "prefix": "SA",
+      "bounds": [
+        47.78754915028125,
+        29.732957739348194,
+        47.942,
+        29.867042260651807
+      ],
+      "min_elevation_m": 19.131754423859036,
+      "max_elevation_m": 68.5640306682617,
+      "satellite_url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=s2cloudless_3857&STYLES=&SRS=EPSG%3A3857&BBOX=5319685.637667842%2C3469270.027820786%2C5336879.027611122%2C3486470.788944877&WIDTH=1024&HEIGHT=1024&FORMAT=image%2Fjpeg",
+      "satellite_sha256": "9581a91b9c827ce943362b270f442e0f357cd328c4dad728770807426738ef67"
+    },
+    {
+      "name": "Bahra",
+      "prefix": "BH",
+      "bounds": [
+        47.848,
+        29.571,
+        48.012,
+        29.629
+      ],
+      "min_elevation_m": -12.192719760874752,
+      "max_elevation_m": 82.14976711533592,
+      "satellite_url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=s2cloudless_3857&STYLES=&SRS=EPSG%3A3857&BBOX=5326414.995476553%2C3448524.229222083%2C5344671.39196665%2C3455949.8399996967&WIDTH=1024&HEIGHT=1024&FORMAT=image%2Fjpeg",
+      "satellite_sha256": "d9b67669254887aa71187e0bc6f437dbe4c022a486113a034183217b3da02203"
+    },
+    {
+      "name": "Minagish",
+      "prefix": "MN",
+      "bounds": [
+        47.488,
+        28.981,
+        47.652,
+        29.11
+      ],
+      "min_elevation_m": 127.54301581978403,
+      "max_elevation_m": 192.77994978422177,
+      "satellite_url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=s2cloudless_3857&STYLES=&SRS=EPSG%3A3857&BBOX=5286339.978790975%2C3373227.9828463164%2C5304596.375281072%2C3389654.0336741395&WIDTH=1024&HEIGHT=1024&FORMAT=image%2Fjpeg",
+      "satellite_sha256": "f67d00482785df3c9a05c826484afa24a7e5ed666eca177938dc66e3dcf60109"
+    },
+    {
+      "name": "Umm Gudair",
+      "prefix": "UG",
+      "bounds": [
+        47.588,
+        28.751,
+        47.752,
+        28.88
+      ],
+      "min_elevation_m": 155.65670290846336,
+      "max_elevation_m": 203.1178666666383,
+      "satellite_url": "https://tiles.maps.eox.at/wms?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=s2cloudless_3857&STYLES=&SRS=EPSG%3A3857&BBOX=5297471.927870302%2C3343991.9261464123%2C5315728.3243603995%2C3360381.571513256&WIDTH=1024&HEIGHT=1024&FORMAT=image%2Fjpeg",
+      "satellite_sha256": "012d2a67b0b6c9b1c3c6f9dcbe992dc4381cd2ed587f8e30c401ff7c7189c14a"
+    }
+  ],
+  "tiles": [
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/11/1296/851.png",
+      "file": "terrain-11-1296-851.png",
+      "sources": "srtm/N28E047.tif, srtm/N29E047.tif",
+      "sha256": "7ef893800535bc846ff47737c9a5a165ad0d067e861aa6372e6d153077013341"
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/11/1297/851.png",
+      "file": "terrain-11-1297-851.png",
+      "sources": "srtm/N28E048.tif, srtm/N29E048.tif, srtm/N28E047.tif, srtm/N29E047.tif, gmted/10N030E_20101117_gmted_mea075.tif",
+      "sha256": "aee25079fff5a75e651d537063e26663427e6dc0b43e1c752ee6a19b262e2942"
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/11/1296/852.png",
+      "file": "terrain-11-1296-852.png",
+      "sources": "srtm/N28E047.tif",
+      "sha256": "ecf168690e89245d3c618f85633ded22891d8f8fc8ffb080a9e63b8a5e0ec9bb"
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/11/1297/852.png",
+      "file": "terrain-11-1297-852.png",
+      "sources": "srtm/N28E048.tif, srtm/N28E047.tif",
+      "sha256": "75a613cc459dfb676c241ce478b5cca5ef4326f5a03cc827779842ce09a55cbe"
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/11/1294/845.png",
+      "file": "terrain-11-1294-845.png",
+      "sources": "srtm/N29E047.tif",
+      "sha256": "d401f5b0002b3e7130cd35a670d5a71b062c80a81ac277a8dcfeb1898b1752f8"
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/11/1295/845.png",
+      "file": "terrain-11-1295-845.png",
+      "sources": "srtm/N29E047.tif",
+      "sha256": "a82d6f0324765f2e0bbc2be87c183ddb7c18d24c5e0013876598f9fcb5ba458b"
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/11/1294/846.png",
+      "file": "terrain-11-1294-846.png",
+      "sources": "srtm/N29E047.tif",
+      "sha256": "6e7fab7cfbbed4366f75bf1da4d6b40de6fe853bea13e610252f6c2ab89516b4"
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/11/1295/846.png",
+      "file": "terrain-11-1295-846.png",
+      "sources": "srtm/N29E047.tif",
+      "sha256": "da18e855781c20c18d14b3c5746eb3d11a79649d123921b05f8ae205854349d5"
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/11/1296/845.png",
+      "file": "terrain-11-1296-845.png",
+      "sources": "srtm/N29E047.tif",
+      "sha256": "779950197678d77bd636475cbbacb2e541546de45cd286b7cf40ac90906e6621"
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/11/1296/846.png",
+      "file": "terrain-11-1296-846.png",
+      "sources": "srtm/N29E047.tif",
+      "sha256": "adeafa0ce0ac8a778c3bafec8613459f00cb8ce9a1f8e910a02ead9d6a690749"
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/11/1296/847.png",
+      "file": "terrain-11-1296-847.png",
+      "sources": "srtm/N29E047.tif, gmted/10N030E_20101117_gmted_mea075.tif",
+      "sha256": "296933df150de71d4d374843312c338cec7000c3e51eca2e783b52f094a5739c"
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/11/1297/847.png",
+      "file": "terrain-11-1297-847.png",
+      "sources": "srtm/N29E048.tif, srtm/N29E047.tif, gmted/10N030E_20101117_gmted_mea075.tif",
+      "sha256": "1038211f1e260a2d6b2ea2144e74c513b8427781f59ae777d083b62ef8707ed9"
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/11/1294/850.png",
+      "file": "terrain-11-1294-850.png",
+      "sources": "srtm/N29E047.tif",
+      "sha256": "59a2419d71a1fe15abf16f9de0c1396fb952289c06fc704e31f192df71acbf8e"
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/11/1295/850.png",
+      "file": "terrain-11-1295-850.png",
+      "sources": "srtm/N29E047.tif",
+      "sha256": "00ee466b7d2d36837be052603409f5c80b945e25af8d927082d66489a657052a"
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/11/1294/851.png",
+      "file": "terrain-11-1294-851.png",
+      "sources": "srtm/N28E047.tif, srtm/N29E047.tif",
+      "sha256": "ea9d209037ac2541412d8a7070ee3d6e9ded6e9e7ab78b3d6e2c22a4e1477de9"
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/11/1295/851.png",
+      "file": "terrain-11-1295-851.png",
+      "sources": "srtm/N28E047.tif, srtm/N29E047.tif",
+      "sha256": "140360d29890849f49b579d76186e5cc6cd3f289677d77a04281aad965b1a634"
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/11/1294/852.png",
+      "file": "terrain-11-1294-852.png",
+      "sources": "srtm/N28E047.tif",
+      "sha256": "d9bfadef20aa7d795fa01007861eb52716f3e40a190491cc74f41f009328cf59"
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/11/1295/852.png",
+      "file": "terrain-11-1295-852.png",
+      "sources": "srtm/N28E047.tif",
+      "sha256": "ec74a18a48f863cc640b627a22a780559e43c3c0e63518fd28020077af9f4ed7"
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/11/1294/853.png",
+      "file": "terrain-11-1294-853.png",
+      "sources": "srtm/N28E047.tif",
+      "sha256": "2e7d3d24f7e4d3eb722ba216b83a425034af7ba2784b79aea99882b95332f0db"
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/11/1295/853.png",
+      "file": "terrain-11-1295-853.png",
+      "sources": "srtm/N28E047.tif",
+      "sha256": "314f5dc4196ae74b63aec4af4b1e15cfeeaa730c1c915aeaeae30c6330cee57c"
+    }
+  ]
+}
