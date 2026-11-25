@@ -2,6 +2,8 @@
 
 Browser-only Kuwait waterflood engineering dashboard, published with GitHub Pages.
 
+**[Open the dashboard](https://obriengareth.github.io/waterflood-intelligence/)**
+
 ## What works
 
 Ten navigation areas, six-field and reservoir filtering, real cached satellite maps,
